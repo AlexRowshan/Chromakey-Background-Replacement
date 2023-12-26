@@ -7,6 +7,7 @@ This technique finds frequent application in the TV, movie, and digital imaging 
 
 Compilation instructions:
 g++ -g -Wall -c bmplib.cpp -o bmplib.o  
+
 g++ -g -Wall -o chromakey bmplib.o chromakey.cpp
 
 ./chromakey colbert_gs.bmp campus1.bmp 40.5 output1.bmp output2.bmp

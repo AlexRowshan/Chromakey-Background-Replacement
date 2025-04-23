@@ -1,0 +1,28 @@
+{
+  "name": "chromakey-background-replacement",
+  "version": "1.0.0",
+  "description": "A green screen/chroma key app with C++ backend and TypeScript frontend",
+  "main": "index.js",
+  "scripts": {
+    "build:cpp": "g++ -g -Wall -c bmplib.cpp -o bmplib.o && g++ -g -Wall -o chromakey bmplib.o chromakey.cpp",
+    "start:backend": "cd backend && npm run dev",
+    "start:frontend": "cd frontend && npm start",
+    "dev": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "build": "cd frontend && npm run build",
+    "start": "NODE_ENV=production cd backend && npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "chromakey",
+    "greenscreen",
+    "image-processing",
+    "typescript",
+    "react",
+    "c++"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
